@@ -46,7 +46,7 @@ if not isinstance(value, %(type)s) and value is not None:
             elif specfound.type == "model":
                 subgen = CodeGeneratorModel(specfound)
                 self.content = subgen.generate() + self.content
-                pre = "classs= %s\n" % (specfound.getClassName())
+                pre = "classs= %s\n" % (subgen.getClassName())
                 s = "isinstance(value, classs)"
                 init = pre
                 init += "self._P_%s=classs()" % name

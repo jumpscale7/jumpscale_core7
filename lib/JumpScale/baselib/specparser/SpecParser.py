@@ -726,7 +726,7 @@ class SpecParserFactory():
                     found=False
                 if appname!="" and spec.appname!=appname:
                     found=False
-                if specname!="" and spec.name!=specname:
+                if specname!="" and spec.name!=specname.lower():
                     found=False
                 if type!="" and spec.type!=type:
                     found=False
